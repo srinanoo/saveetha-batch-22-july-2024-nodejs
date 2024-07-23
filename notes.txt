@@ -1,0 +1,43 @@
+querystring
+	http://localhost:4000/api/v1/route/?id=1&name=Dinesh
+		in express
+			req.query.id
+			req.query.name
+post
+	url-encoded
+		http://localhost:4000/api/v1/route/
+			PostMan
+				- select "Body"
+				- select "x-www-form-urlencoded"
+				- enter the key and values
+	json
+		http://localhost:4000/api/v1/route/
+			PostMan
+				- select "Body"
+				- select "raw" => "json"
+				- enter the key and values in JSON format
+		in express
+			req.body
+query params
+	http://localhost:4000/api/v1/route/1/Dinesh
+		in Express
+			"api/v1/:id/:name
+			in controller
+				req.params.id
+				req.params.name
+
+
+
+Node Folder Structure
+    node_modules/
+    routes/ - thread pool
+    controllers/
+    services/ - service workers (db operations or file operations or supports your project)
+    .gitignore
+    index.js or server.js or express.js (event queue and event loop)
+    package.json
+    package-lock.json
+
+
+
+

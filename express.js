@@ -4,13 +4,28 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-const trainees = require('./expressController');
+const traineesRoutes = require('./routes/traineeRoutes');
+app.use('/api/v1/trainees', traineesRoutes);
 
-app.get("/api/v1/readAllTrainees", trainees.readAllTrainees);
-app.post("/api/v1/createTrainee", trainees.createTrainee);
-app.get("/api/v1/readSpecificTrainee", trainees.readSpecificTrainee);
-app.put("api/v1/updateTrainee", trainees.updateTrainee);
-app.delete("/api/v1/deleteTrainee/:id", trainees.deleteTrainee);
+// const trainersRoutes = require('./routes/traineeRoutes');
+// app.use('/api/v1/trainers', traineesRoutes);
+
+// const classesRoutes = require('./routes/traineeRoutes');
+// app.use('/api/v1/classes', traineesRoutes);
+
+// const companyRoutes = require('./routes/traineeRoutes');
+// app.use('/api/v1/company', traineesRoutes);
+
+
+
+// Trainees DB
+    // Trainees
+    // Trainers
+    // Classes
+    // Batch
+    // Company
+    // Branch
+
 
 app.use("/*", (req, res) => res.send("No Route Match Found!"));
 
