@@ -31,7 +31,7 @@ query params
 Node Folder Structure
     node_modules/
     routes/ - thread pool
-    controllers/
+    controllers/ - to verify whether data is sent or returned properly
     services/ - service workers (db operations or file operations or supports your project)
     .gitignore
     index.js or server.js or express.js (event queue and event loop)
@@ -39,5 +39,19 @@ Node Folder Structure
     package-lock.json
 
 
-
+Status Code
+    HTTP STATUS CODES
+        100
+        200
+            - SUCCESS
+        300
+            - 301 (temporary redirect)
+            - 302 (permanent redirect)
+        400
+            - 401
+            - 402 (unauthorised)
+            - 403 (forbidden)
+            - Not Found (404)
+        500
+            - Server Error
 

@@ -1,9 +1,10 @@
 const file = "./trainees.json";
 const fs = require("fs");
+const logger = require('../services/loggers');
 
 function createTrainee(req, res) {
     try {
-        let data = fs.readFileSync(file, "utf8");
+        let data = fs.readFileSync(file1, "utf8");
         let newData = JSON.parse(data);
         console.log(newData, typeof(newData));
         let traineeObj = req.body;
@@ -11,10 +12,21 @@ function createTrainee(req, res) {
 
         fs.writeFileSync(file, JSON.stringify(newData));
 
-        res.send("Trainee Created successfully!");
+        // let obj = {
+        //     "msg": "Trainees Created Successfully!",
+        //     "data": "",
+        //     "error": ""
+        // }
+        // res.send(obj);
+
+        res.status(200).json({"data": "", "msg": "Trainees Created Successfully!", "error": ""});
     } catch (err) {
-        console.error(err.message);
-        res.send("Unable to create trainee! Please try again!");
+        // console.error(err.message);
+        // res.send("Unable to create trainee! Please try again!");
+
+        logger.error(`${err.status || 500} - ${res.statusMessage} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+
+        res.status(500).json({"data": "", "msg": "", "error": "Unable to create trainee! Please try again!"})
     }
 }
 
