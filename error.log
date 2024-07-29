@@ -1,2 +1,7 @@
 error: Jul-23-2024 09:58:56: 	500 - undefined - file1 is not defined - /api/v1/trainees/createTrainee - POST - ::1
 error: Jul-23-2024 09:59:58: 	500 - undefined - file1 is not defined - /api/v1/trainees/createTrainee - POST - ::1
+error: Jul-27-2024 09:55:40: 	500 - undefined - TraineeModel is not a constructor - /api/v1/trainees/createTrainee - POST - ::1
+error: Jul-27-2024 09:59:01: 	500 - undefined - trainees validation failed: gender: Path `gender` is required. - /api/v1/trainees/createTrainee - POST - ::1
+error: Jul-27-2024 09:59:51: 	500 - undefined - trainees validation failed: gender: Please enter the Gender - /api/v1/trainees/createTrainee - POST - ::1
+error: Jul-27-2024 10:00:57: 	500 - undefined - trainees validation failed: gender: Please enter the Gender - /api/v1/trainees/createTrainee - POST - ::1
+error: Jul-27-2024 10:02:06: 	500 - undefined - trainees validation failed: gender: Please enter the Gender - /api/v1/trainees/createTrainee - POST - ::1

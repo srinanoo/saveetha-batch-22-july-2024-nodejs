@@ -10,7 +10,7 @@ const traineeSchema = new Schema({
     },
     "gender": {
         type: String,
-        required: true
+        required: [true, "Please enter the Gender"]
     },
     "dob": Date,
     "phone": Number,
@@ -18,6 +18,6 @@ const traineeSchema = new Schema({
     "active": Boolean
 });
 
-const TraineeModel = mongoose.model("Trainee", traineeSchema);
+const TraineeModel = mongoose.model("trainees", traineeSchema);
 
 module.exports = {TraineeModel};

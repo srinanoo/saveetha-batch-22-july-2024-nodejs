@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
-const trainees = require('../controllers/expressController');
+// const trainees = require('../controllers/expressController');
+const trainees = require('../controllers/traineeController');
 
 router.get("/readAllTrainees", trainees.readAllTrainees);
 router.post("/createTrainee", trainees.createTrainee);
